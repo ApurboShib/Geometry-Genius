@@ -1,124 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometry Gem.</title>
-    <!-- connect with daisyui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <title>Geometry Gem</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <!-- hearder section started here -->
-    <header>
 
-    </header>
-   
-     <main>
-        <!-- main content container. -->
-         <div>
-            <!-- shape card container. -->
-             <div>
-                <!-- triangle card -->
+<body class="m-8">
+    <!-- Header Section -->
+    <header></header>
+
+    <!-- Main Section -->
+    <main>
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Shape Card Container -->
+            <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Triangle Card -->
                 <div class="card bg-base-100 w-96 shadow-xl">
                     <figure>
-                      <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Triangle shape for area calculation" />
                     </figure>
                     <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
+                        <h2 class="card-title">Triangle</h2>
+                        <p class="text-center">Area = 0.5 × Base × Height</p>
+                        <div class="flex items-center gap-2">
+                            <input class="w-24 text-lg p-2 border rounded" type="text" placeholder="Base (B)" />
+                            <span>cm</span>
+                            <input class="w-24 text-lg p-2 border rounded" type="text" placeholder="Height (H)" />
+                            <span>cm</span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full mt-4">Calculate</button>
+                        </div>
                     </div>
-                  </div>
-                  <!-- Rectangle  card-->
-                <div class="card bg-base-100 w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- paralleogram card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- rhombus card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- pentagon card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
-                    <figure>
-                      <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                        alt="Shoes" />
-                    </figure>
-                    <div class="card-body">
-                      <h2 class="card-title">Shoes!</h2>
-                      <p>If a dog chews shoes whose shoes does he choose?</p>
-                      <div class="card-actions justify-end">
-                        <button class="btn btn-primary">Buy Now</button>
-                      </div>
-                    </div>
-                  </div>
-             </div>
-             <!-- ellips card -->
-             <div class="card bg-base-100 w-96 shadow-xl">
-                <figure>
-                  <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                  <h2 class="card-title">Shoes!</h2>
-                  <p>If a dog chews shoes whose shoes does he choose?</p>
-                  <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                  </div>
                 </div>
-              </div>
-             <!-- area calculation container. -->
-              <div class="w-96">
-                <h3 class="text-3xl">Area Calculations.</h3>
-              </div>
-         </div>
-     </main>
-     <!-- footer section started here. -->
-      <footer>
 
-      </footer>
+                <!-- Rectangle Card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Rectangle shape for area calculation" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Learn how to calculate the area of a rectangle.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Parallelogram Card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Parallelogram shape for area calculation" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Learn how to calculate the area of a parallelogram.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rhombus Card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Rhombus shape for area calculation" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Learn how to calculate the area of a rhombus.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pentagon Card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Pentagon shape for area calculation" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Pentagon</h2>
+                        <p>Learn how to calculate the area of a pentagon.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Shape Card -->
+                <div class="card bg-base-100 w-96 shadow-xl">
+                    <figure>
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Additional shape for area calculation" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Additional Shape</h2>
+                        <p>Learn how to calculate its area.</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Area Calculation Container -->
+            <div class="w-96 border-2 border-gray-700 rounded-md">
+                <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/triangle-calculate.js"></script>
 </body>
+
 </html>
