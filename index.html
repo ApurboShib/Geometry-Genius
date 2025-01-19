@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Gem</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="m-8">
     <!-- Header Section -->
-    <header></header>
+    <header class="text-center py-6">
+        <h1 class="text-4xl font-bold">Geometry Gem</h1>
+        <p class="text-lg mt-2">Explore shapes and calculate their areas!</p>
+    </header>
 
     <!-- Main Section -->
     <main>
@@ -19,18 +22,42 @@
             <!-- Shape Card Container -->
             <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Triangle Card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
+                <div class="card bg-base-100 shadow-xl">
                     <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Triangle shape for area calculation" />
+                        <img src="images/triangle.png" alt="Illustration of a triangle" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Triangle</h2>
-                        <p class="text-center">Area = 0.5 × Base × Height</p>
+                        <p>Area = 0.5 × Base × Height</p>
                         <div class="flex items-center gap-2">
-                            <input class="w-24 text-lg p-2 border rounded" type="text" placeholder="Base (B)" />
-                            <span>cm</span>
-                            <input class="w-24 text-lg p-2 border rounded" type="text" placeholder="Height (H)" />
-                            <span>cm</span>
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Base (B)" />
+                            <span class="text-sm">cm</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Height (H)" />
+                            <span class="text-sm">cm</span>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="calculateTriangleArea() " class="btn btn-primary w-full mt-4">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rectangle Card -->
+                <div class="card bg-base-100 shadow-xl">
+                    <figure>
+                        <img src="images/rectangle.png" alt="Illustration of a rectangle" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area = Length × Width</p>
+                        <div class="flex items-center gap-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Length (L)" />
+                            <span class="text-sm">cm</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Width (W)" />
+                            <span class="text-sm">cm</span>
                         </div>
                         <div class="card-actions">
                             <button class="btn btn-primary w-full mt-4">Calculate</button>
@@ -38,80 +65,98 @@
                     </div>
                 </div>
 
-                <!-- Rectangle Card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
-                    <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Rectangle shape for area calculation" />
-                    </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Rectangle</h2>
-                        <p>Learn how to calculate the area of a rectangle.</p>
-                        <div class="card-actions">
-                            <button class="btn btn-primary w-full">Calculate</button>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Parallelogram Card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
+                <div class="card bg-base-100 shadow-xl">
                     <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Parallelogram shape for area calculation" />
+                        <img src="images/parallelogram.png" alt="Illustration of a parallelogram" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Parallelogram</h2>
-                        <p>Learn how to calculate the area of a parallelogram.</p>
+                        <p>Area = Base × Height</p>
+                        <div class="flex items-center gap-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Base (B)" />
+                            <span class="text-sm">cm</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Height (H)" />
+                            <span class="text-sm">cm</span>
+                        </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button class="btn btn-primary w-full mt-4">Calculate</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Rhombus Card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
+                <!-- Add other shapes here using similar structure -->
+                  <!--  Rhombus Card-->
+                <div class="card bg-base-100 shadow-xl">
                     <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Rhombus shape for area calculation" />
+                        <img src="images/rhombus.png" alt="Illustration of a triangle" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Rhombus</h2>
-                        <p>Learn how to calculate the area of a rhombus.</p>
+                        <p>Area = 0.5 × Base × Height</p>
+                        <div class="flex items-center gap-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Base (B)" />
+                            <span class="text-sm">cm</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Height (H)" />
+                            <span class="text-sm">cm</span>
+                        </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button class="btn btn-primary w-full mt-4">Calculate</button>
                         </div>
                     </div>
                 </div>
-
-                <!-- Pentagon Card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
+                 <!-- Pentagon Card -->
+                 <div class="card bg-base-100 shadow-xl">
                     <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Pentagon shape for area calculation" />
+                        <img src="images/pentagon.png" alt="Illustration of a triangle" />
                     </figure>
                     <div class="card-body">
                         <h2 class="card-title">Pentagon</h2>
-                        <p>Learn how to calculate the area of a pentagon.</p>
+                        <p>Area = 0.5 × Base × Height</p>
+                        <div class="flex items-center gap-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Base (B)" />
+                            <span class="text-sm">cm</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Height (H)" />
+                            <span class="text-sm">cm</span>
+                        </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button class="btn btn-primary w-full mt-4">Calculate</button>
                         </div>
                     </div>
                 </div>
-
-                <!-- Additional Shape Card -->
-                <div class="card bg-base-100 w-96 shadow-xl">
+                 <!-- ellips Card -->
+                 <div class="card bg-base-100 shadow-xl">
                     <figure>
-                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Additional shape for area calculation" />
+                        <img src="images/ellipse.png" alt="Illustration of a triangle" />
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title">Additional Shape</h2>
-                        <p>Learn how to calculate its area.</p>
+                        <h2 class="card-title">ellips</h2>
+                        <p>Area = 0.5 × Base × Height</p>
+                        <div class="flex items-center gap-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Base (B)" />
+                            <span class="text-sm">cm</span>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2">
+                            <input class="w-full text-lg p-2 border rounded" type="number" placeholder="Height (H)" />
+                            <span class="text-sm">cm</span>
+                        </div>
                         <div class="card-actions">
-                            <button class="btn btn-primary w-full">Calculate</button>
+                            <button class="btn btn-primary w-full mt-4">Calculate</button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Area Calculation Container -->
-            <div class="w-96 border-2 border-gray-700 rounded-md">
-                <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+            <div class="w-full md:w-96 border-2 border-gray-700 rounded-md p-4">
+                <h3 class="text-3xl text-center mb-4">Area Calculation</h3>
+                <div id="calculation-result" class="text-lg text-center">Enter values to calculate area.</div>
             </div>
         </div>
     </main>
