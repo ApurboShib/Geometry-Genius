@@ -33,4 +33,9 @@ function calculateTriangleArea () {
     const area = 0.5 * base * height;
     console.log('Area of triangle is : ',area);
 
+    // display triangle area.
+    const displayTriangleArea = document.getElementById('triangle-area');
+    displayTriangleArea.innerText = area; // jeheto eita input na so ekhane (value) set korrar dorkar nai just (innerText) set korbo.
+    
+
 }
